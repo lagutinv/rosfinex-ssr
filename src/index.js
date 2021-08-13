@@ -14,5 +14,5 @@ const app = (
 
 rootElement.hasChildNodes()
     ? hydrate(app, rootElement)
-    : render(app, rootElement);
+    : render(app, rootElement)
 

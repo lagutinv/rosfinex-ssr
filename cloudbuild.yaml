@@ -14,5 +14,5 @@ steps:
     dir: 'functions'
     args: ['run', 'copy']
   # Deploy
-  - name: 'gcr.io/[YOUR-PROJECT]/firebase'
+  - name: 'gcr.io/rosfinex-d2aa4/firebase'
     args: ['deploy']
