@@ -15,4 +15,4 @@ steps:
     args: ['run', 'copy']
   # Deploy Hosting
   - name: 'gcr.io/rosfinex-d2aa4/firebase'
-    args: ['deploy --only hosting']
+    args: ['deploy']
