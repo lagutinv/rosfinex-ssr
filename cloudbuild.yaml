@@ -1,0 +1,18 @@
+steps:
+  # Install
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  # Build
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build:ssr']
+  # Install cloud functions
+  - name: 'gcr.io/cloud-builders/npm'
+    dir: 'functions'
+    args: ['install']
+  # Copy build to cloud functions
+  - name: 'gcr.io/cloud-builders/npm'
+    dir: 'functions'
+    args: ['run', 'copy']
+  # Deploy
+  - name: 'gcr.io/[YOUR-PROJECT]/firebase'
+    args: ['deploy']
