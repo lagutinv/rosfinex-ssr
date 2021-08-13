@@ -13,6 +13,6 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     dir: 'functions'
     args: ['run', 'copy']
-  # Deploy
+  # Deploy Hosting
   - name: 'gcr.io/rosfinex-d2aa4/firebase'
-    args: ['deploy']
+    args: ['deploy --only hosting']
